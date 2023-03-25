@@ -2,7 +2,7 @@ let titleText = document.querySelector("header").textContent;
 let titleIndex = 0;
 
 (() => {
-    document.querySelector("header").textContent = "New Title";
+    document.querySelector("header").textContent = "New Title from js.";
 })();
 
 var skillsSection = document.querySelector("#skills");
