@@ -1,0 +1,31 @@
+body {
+    background-image: url('Assets/back.jpg');
+    background-size:cover;
+}
+
+header {
+    background-color: rgb(130, 149, 145);
+    color: rgb(253, 238, 238);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#home, #about, #education, #skills {
+    color: red;
+}
+
+footer {
+    color: rgb(43, 255, 216);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
