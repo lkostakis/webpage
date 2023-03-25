@@ -1,18 +1,29 @@
-let titleText = document.querySelector("header").textContent;
-let titleIndex = 0;
+const homeSection = document.querySelector("#home h2");
+const originalHomeText = "Welcome to my personal web page!<br>" +
+                        "Here you can learn more about me, my interests, and my work.<br>" +
+                        "Feel free to explore and get in touch if you have any questions or just want to say hello!<br> Thank you for visiting!";
+let indexHome = 0;
 
-(() => {
-    document.querySelector("header").textContent = "New Title from js.";
-})();
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-var skillsSection = document.querySelector("#skills");
-var paragraphs = skillsSection.querySelector("p")
-var originalText = paragraphs.textContent;
-var index = 0;
+async function displayWelcomeText() {
+    await sleep(3000);
+    setInterval(() => {
+        homeSection.innerHTML = originalHomeText.substring(0, indexHome++);
+        if (indexHome > originalHomeText.length) {
+            clearInterval();
+        }
+    }, 75);
+}
+displayWelcomeText()
 
-setInterval(() => {
-    paragraphs.textContent = originalText.substring(0, index++);
-    if (index > originalText.length) {
-        clearInterval();
-    }
-}, 100);
+async function hideSections() {
+    await sleep(19500);
+    const sections = document.querySelectorAll('.hidden');
+    sections.forEach(element => {
+        element.style.display = 'block';
+    });
+}
+hideSections()

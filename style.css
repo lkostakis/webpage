@@ -1,26 +1,12 @@
 body {
     background-image: url('Assets/back.jpg');
     background-size:cover;
-}
-
-header {
-    background-color: rgb(130, 149, 145);
-    color: rgb(253, 238, 238);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    text-align: left;
+    border-right: 10px;
 }
 
 #home, #about, #education, #skills {
-    color: red;
+    color: rgb(255, 255, 255);
 }
 
 footer {
@@ -28,4 +14,43 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+#home, #about, #education, #skills {
+    font-family: fixedsys;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#home h2 {
+    font-size: xx-large;
+}
+
+#skills p {
+    font-size: 18px;
+}
+
+@keyframes cursor-blink {
+    0% {
+        opacity: 0;
+        /* animation-play-state: paused; */
+    }
+
+    /* 100% { */
+        /* opacity: 1; */
+        /* animation-play-state: running; */
+    /* } */
+}
+
+#home h2::after {
+    content: "a";
+    width: 10px;
+    height: 20px;
+    background: #ffffff;
+    display: inline;
+    animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+.hidden {
+    display: none;
 }
