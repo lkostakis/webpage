@@ -37,5 +37,5 @@ function displaySections() {
             clearInterval(delaySections)
         }
         clearInterval(delaySections)
-    }, 5000)
+    }, 9500)
 })();

@@ -7,6 +7,7 @@ body {
 
 #home, #about, #education, #skills {
     color: rgb(255, 255, 255);
+    opacity: 100%;
 }
 
 footer {
@@ -33,13 +34,20 @@ footer {
 @keyframes cursor-blink {
     0% {
         opacity: 0;
-        /* animation-play-state: paused; */
     }
+}
 
-    /* 100% { */
-        /* opacity: 1; */
-        /* animation-play-state: running; */
-    /* } */
+@keyframes sections-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#about, #education, #skills {
+    animation: sections-fade 2s alternate;
 }
 
 #home h2::after {
@@ -49,6 +57,11 @@ footer {
     background: #ffffff;
     display: inline;
     animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+img {
+    width:20px;
+    height:20px;
 }
 
 .hidden {
