@@ -3,27 +3,39 @@ const originalHomeText = "Welcome to my personal web page!<br>" +
                         "Here you can learn more about me, my interests, and my work.<br>" +
                         "Feel free to explore and get in touch if you have any questions or just want to say hello!<br> Thank you for visiting!";
 let indexHome = 0;
+let skipAnimation = 0
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+document.addEventListener("click", function() {
+    skipAnimation = 1;
+    clearInterval(delayThreeSeconds);
+    homeSection.innerHTML = originalHomeText
+    displaySections();
+});
 
-async function displayWelcomeText() {
-    await sleep(3000);
-    setInterval(() => {
+const delayThreeSeconds =  setInterval(() => {
+    const displayWelcomeText = setInterval(() => {
         homeSection.innerHTML = originalHomeText.substring(0, indexHome++);
-        if (indexHome > originalHomeText.length) {
-            clearInterval();
+        if (indexHome > originalHomeText.length || skipAnimation ==1) {
+            clearInterval(displayWelcomeText);
+            homeSection.innerHTML = originalHomeText
         }
-    }, 75);
-}
-displayWelcomeText()
+    }, 30);
+    clearInterval(delayThreeSeconds);
+}, 3000);
 
-async function hideSections() {
-    await sleep(19500);
+function displaySections() {
     const sections = document.querySelectorAll('.hidden');
     sections.forEach(element => {
         element.style.display = 'block';
     });
 }
-hideSections()
+
+(() => {
+    const delaySections = setInterval(() => {
+        if (skipAnimation !=1) {
+            displaySections();
+            clearInterval(delaySections)
+        }
+        clearInterval(delaySections)
+    }, 5000)
+})();
