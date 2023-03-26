@@ -3,32 +3,40 @@
 <head>
 	<title> Lefteris Kostakis </title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/fixedsys-css/css/fixedsys.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 	<section id="home">
 		<h2></h2>
 	</section>
+	
+	<div class="flex-container" id="links">
 
-	<section id="about" class="hidden">
-		<h2>About Me</h2>
-		<p>You can find me at: 
-			<a href="https://www.github.com/terrys48" target="_blank"><img src="Assets/github.png" alt="Github"></a>
-			or
-			<a href="https://www.linkedin.com/in/eleftherios-kostakis/" target="_blank"><img src="Assets/linkedin.png" alt="LinkedIn"></a>
-		.</p>
-		<p>Here is some information about me.</p>
-	</section>
+		<div id="about" class="hidden">
+			<h2>
+				<a class="active" href="#about-me"> About Me </a>
+			</h2>
+		</div>
 
-	<section id="education" class="hidden">
-		<h2>Education</h2>
-		<p>Here is my educational background.</p>
-	</section>
+		<div id="education" class="hidden">
+			<h2>
+				<a href="#education"> Education </a>
+			</h2>
+		</div>
 
-	<section id="skills" class="hidden">
-		<h2>Skills</h2>
-		<p>Here are my skills and abilities.</p>
-	</section>
+		<div id="skills" class="hidden">
+			<h2>
+				<a href="#skills"> Skills </a>
+			</h2>
+		</div>
+
+	</div>
+
+	<div id="content" class="hidden">
+	</div>
 
 	<footer>
 		<p>&copy; 2023 My Website</p>
