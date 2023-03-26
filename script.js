@@ -12,6 +12,10 @@ document.addEventListener("click", function() {
     displaySections();
 });
 
+(() => {
+    
+})
+
 const delayThreeSeconds =  setInterval(() => {
     const displayWelcomeText = setInterval(() => {
         homeSection.innerHTML = originalHomeText.substring(0, indexHome++);
