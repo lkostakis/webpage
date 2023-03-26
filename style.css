@@ -1,8 +1,9 @@
 body {
-    background-image: url('Assets/back.jpg');
-    background-size:cover;
-    text-align: left;
-    border-right: 10px;
+    background: url("Assets/back.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #home, #about, #education, #skills {
@@ -12,13 +13,6 @@ body {
     font-size: 18px;
     margin-left: 5%;
     margin-right: 5%;
-}
-
-footer {
-    color: rgb(43, 255, 216);
-    position: fixed;
-    bottom: 0;
-    right: 0;
 }
 
 #home h2 {
